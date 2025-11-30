@@ -27,18 +27,17 @@ const Contact = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          service_id: 'service_0i3mzd6', // Replace with your EmailJS service ID
-          template_id: 'template_rg8wdwe', // Replace with your EmailJS template ID
-          user_id: '4kqLtYoThZQvtxBif', // Replace with your EmailJS public key
-          template_params: {
-            from_name: formData.name,
-            from_email: formData.email,
-            company: formData.company,
-            message: formData.message,
-            to_email: 'rohanb.blacktrounce@gmail.com', // Your receiving email
-          },
-        }),
+       body: JSON.stringify({
+         service_id: 'service_0i3mzd6',
+         template_id: 'template_rg8wdwe',
+         user_id: '4kqLtYoThZQvtxBif',
+         template_params: {
+           name: formData.name,                // ✅ matches {{name}}
+           message_subject: formData.message, // ✅ matches {{message_subject}}
+           reply_to: formData.email,          // optional, good practice
+           company: formData.company          // optional
+         },
+       })
       });
 
       if (response.ok) {
@@ -54,7 +53,7 @@ const Contact = () => {
       console.error('Error sending message:', error);
       toast({
         title: "Error Sending Message",
-        description: "Please try again or contact us directly at rohanb.blacktrounce@gmail.com.com",
+        description: "Please try again or contact us directly at rohanb.blacktrounce@gmail.com",
         variant: "destructive",
       });
     } finally {
