@@ -78,10 +78,10 @@ const About = () => {
               <CardContent className="pt-8">
                 <img
                   src={mansiImg}
-                  alt="Manasi H"
+                  alt="Mansi H"
                   className="w-24 h-24 rounded-full object-cover mx-auto mb-4 border"
                 />
-                <h4 className="text-xl font-display font-bold mb-2">Manasi H</h4>
+                <h4 className="text-xl font-display font-bold mb-2">Mansi H</h4>
                 <p className="text-muted-foreground">Chief Technology Officer</p>
               </CardContent>
             </Card>

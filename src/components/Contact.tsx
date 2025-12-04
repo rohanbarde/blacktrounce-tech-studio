@@ -53,7 +53,7 @@ const Contact = () => {
       console.error('Error sending message:', error);
       toast({
         title: "Error Sending Message",
-        description: "Please try again or contact us directly at rohanb.blacktrounce@gmail.com",
+        description: "Please try again or contact us directly at careers@blacktrouncestudio.com",
         variant: "destructive",
       });
     } finally {
@@ -157,7 +157,7 @@ const Contact = () => {
                   <div>
                     <h3 className="font-display font-bold text-lg mb-1">Email</h3>
                     <p className="text-sm text-muted-foreground mt-1">
-                      hr@blacktrounce.com
+                      careers@blacktrouncestudio.com
                     </p>
                   </div>
                 </div>
@@ -190,6 +190,8 @@ const Contact = () => {
                     <h3 className="font-display font-bold text-lg mb-1">Location</h3>
                     <p className="text-sm text-muted-foreground mt-1">
                       Aahilyanagar, Maharashtra, India
+                      <br />
+                      Pune (Opening Soon)
                     </p>
                   </div>
                 </div>
